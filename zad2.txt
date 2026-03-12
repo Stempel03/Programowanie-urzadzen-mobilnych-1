@@ -1,0 +1,38 @@
+fun isPalindrome(str: String): Boolean {
+    if (str.length <= 1) {
+        return true
+    }
+    if (str.first() != str.last()) {
+        return false
+    }
+    return isPalindrome(str.substring(1, str.length - 1))
+}
+
+fun main(){
+    val word = "abba"
+	println(isPalindrome(word))
+}
+
+
+
+fun printPascal(h: Int) {
+    for(i in 1..h)
+    {
+        for(r in 1 until (h-i+1))
+        {
+            print(" ")
+        }
+        var l=1
+        for(k in 1..i)
+        {
+        	print("$l ")
+        	l=l*(i-k)/k
+        }
+    	println()
+    }
+}
+
+fun main(){
+	val height: Int = 5
+	println(printPascal(height))
+}

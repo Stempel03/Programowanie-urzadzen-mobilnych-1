@@ -1,0 +1,31 @@
+import kotlin.math.pow
+
+fun checkArmstrong(number: Int): Boolean {
+
+    var temp = number
+    var digits = 0
+    while (temp != 0) {
+        temp /= 10
+        digits++
+    }
+    temp = number
+    var sum = 0
+
+    while (temp != 0) {
+        val digit = temp % 10
+        sum += digit.toDouble().pow(digits).toInt()
+        temp /= 10
+    }
+
+    return sum == number
+}
+
+fun main() {
+
+    val number1 = 153
+    println(checkArmstrong(number1))
+
+    val number2 = 154
+    println(checkArmstrong(number2))
+
+}

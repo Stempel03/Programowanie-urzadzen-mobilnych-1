@@ -1,0 +1,26 @@
+
+fun foo(num: Int)  {
+    for (i in  1..num)
+    {
+    	if ((i%3==0) &&(i%5==0)){
+            println("trzypiec")
+        }  
+        else if (i%5==0)
+        {
+            println("piec")
+        }
+        else if (i%3==0)
+        {
+            println("trzy")
+        }
+        else
+        {
+            println(i)
+        }
+        
+    }
+}
+fun main(){
+	val num: Int = 15
+	println(foo(num))
+}
