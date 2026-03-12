@@ -1,20 +1,21 @@
-fun Pascal(n: Int) {
-    for (i in 1..n) {
-        for (j in 1 until (n-i+1)) {
+fun printPascal(h: Int) {
+    for(i in 1..h)
+    {
+        for(r in 1 until (h-i+1))
+        {
             print(" ")
         }
-        var C = 1
-        for (k in 1..i) {
-            print("$C ")
-            C = C * (i - k) / k
+        var l=1
+        for(k in 1..i)
+        {
+        	print("$l ")
+        	l=l*(i-k)/k
         }
-        
-        println(" ")
+    	println()
     }
-    
 }
 
-fun main() {
-    val h = 4
-    Pascal(h)
+fun main(){
+	val height: Int = 5
+	println(printPascal(height))
 }
